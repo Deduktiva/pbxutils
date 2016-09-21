@@ -4,7 +4,7 @@
 
 `watched_channels` is a space separated list.
 
-The manager user does not need any write rights, and may only need `read=call` or even `read=` rights.
+The manager user does not need any write rights, and only needs `read=call` rights.
 
 ## notify_incoming_call
 
