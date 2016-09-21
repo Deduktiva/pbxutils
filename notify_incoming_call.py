@@ -13,7 +13,6 @@ MANAGER_HOSTNAME = config['manager_hostname']
 MANAGER_PORT = int(config.get('manager_port', '5038'))
 MANAGER_USERNAME = config['manager_username']
 MANAGER_PASSWORD = config['manager_password']
-RESTART_ON_ERROR = bool(config.get('restart_on_error', 'true'))
 NOTIFY_TITLE = config['notify_title']
 
 PUSHOVER_URL = 'https://api.pushover.net/1/messages.json'
@@ -55,11 +54,4 @@ def run():
 
 
 if __name__ == '__main__':
-    if RESTART_ON_ERROR:
-        while True:
-            try:
-                run()
-            except Exception as except_inst:
-                print("\n\n\nRestarting, Crashed with:", except_inst)
-    else:
-        run()
+    run()

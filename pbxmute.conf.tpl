@@ -7,5 +7,3 @@ manager_hostname = asterisk.example.com
 manager_port = 5038
 manager_username = manager
 manager_password = password
-
-restart_on_error = true
